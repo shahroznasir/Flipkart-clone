@@ -2,17 +2,15 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.db import Base, engine
-from app.auth import router as auth_router
+from app.routers.auth_router import router as auth_router
+from app.routers.cart_router import router as cart_router
+from app.routers.order_router import router as order_router
+from app.routers.payment_router import router as payment_router
+from app.routers.product_router import router as product_router
+from app.routers.user_router import router as user_router
 
-from app.routers import products, cart, orders, payments
 
 # ✅ Import ALL entities here so SQLAlchemy registers them
-from app.entities.user_entity import UserEntity
-from app.entities.product_entity import ProductEntity
-from app.entities.cart_entity import CartEntity
-from app.entities.order_entity import OrderEntity
-from app.entities.order_item_entity import OrderItemEntity
-from app.entities.payment_entity import PaymentEntity
 
 # =====================
 # APP INIT
@@ -39,10 +37,11 @@ Base.metadata.create_all(bind=engine)
 # ROUTERS
 # =====================
 app.include_router(auth_router)
-app.include_router(products.router)
-app.include_router(cart.router)
-app.include_router(orders.router)
-app.include_router(payments.router)
+app.include_router(product_router)
+app.include_router(cart_router)
+app.include_router(order_router)
+app.include_router(payment_router)
+app.include_router(user_router)
 
 # =====================
 # ROOT CHECK
