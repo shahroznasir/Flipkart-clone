@@ -1,51 +1,69 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-
-from app.db import get_db
-from app.deps import get_current_user
-
-# ✅ Import ENTITIES (NOT models)
+from loguru import logger
+from app.database import get_db
+from app.dependency import get_current_user
 from app.entities.order_entity import OrderEntity
 from app.entities.payment_entity import PaymentEntity
-from app.entities.user_entity import UserEntity
 
 router = APIRouter(prefix="/payments", tags=["Payments"])
 
+# PAY FOR ORDER
 
 @router.post("/{order_id}")
 def pay_order(
     order_id: int,
     db: Session = Depends(get_db),
-    user: UserEntity = Depends(get_current_user)
+    user: dict = Depends(get_current_user)
 ):
-    # 1️⃣ Find order
+
+    user_id = user["user_id"]
+    logger.info(f"Payment initiated: user_id={user_id}, order_id={order_id}")
+
+    # Find order
     order = db.query(OrderEntity).filter(
+
         OrderEntity.id == order_id,
-        OrderEntity.user_id == user.id
+        OrderEntity.user_id == user_id
     ).first()
 
     if not order:
-        raise HTTPException(status_code=404, detail="Order not found")
+        logger.warning(
+            f"Payment failed: Order not found order_id={order_id}, user_id={user_id}"
+        )
+        raise HTTPException(
+            status_code=404,
+            detail="Order not found"
+        )
 
-    # 2️⃣ Prevent double payment
+    # Prevent double payment
     if order.status == "paid":
-        raise HTTPException(status_code=400, detail="Order already paid")
+        logger.warning(
+            f"Payment blocked: Order already paid order_id={order_id}"
+        )
+        raise HTTPException(
+            status_code=400,
+            detail="Order already paid"
+        )
+    logger.info(
+        f"Processing payment: order_id={order.id}, amount={order.total}"
+    )
 
-    # 3️⃣ Create payment (Mock payment logic)
+    # Create payment
     payment = PaymentEntity(
         order_id=order.id,
         amount=order.total,
         status="success"
     )
-
     db.add(payment)
 
-    # 4️⃣ Update order status
+    # Update order status
     order.status = "paid"
-
     db.commit()
     db.refresh(payment)
-
+    logger.success(
+        f"Payment successful: payment_id={payment.id}, order_id={order.id}"
+    )
     return {
         "payment_id": payment.id,
         "order_id": order.id,

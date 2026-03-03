@@ -1,46 +1,85 @@
-from datetime import datetime, timedelta
-from jose import jwt
 from fastapi import HTTPException, status
-from sqlalchemy.orm import Session
-
-from app.schemas.user_request import UserRequest
+from app.core.logger import logger
 from app.schemas.login_request import LoginRequest
+from app.schemas.user_request import UserRequest
+from app.services.user_service import UserService
 from app.repositories.user_repository import UserRepository
-from app.services.user_service import create_user
+from app.core.security import create_access_token
 from app.utils.security import verify_password
-
-
-SECRET_KEY = "super-secret-key-change-this"
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 60
-
 
 class AuthService:
 
-    @staticmethod
-    def register_user(db: Session, user: UserRequest):
-        return create_user(db, user)
+    def __init__(
+        self,
+        user_service: UserService,
+        user_repo: UserRepository
+    ):
+        self.user_service = user_service
+        self.user_repo = user_repo
 
-    @staticmethod
-    def login_user(db: Session, data: LoginRequest):
-        repo = UserRepository()
-        user = repo.find_by_email(db, data.email)
 
-        if not user or not verify_password(data.password, user.password):
+    def register_user(self, user: UserRequest):
+        logger.info(
+            "User registration attempt | email={}",
+            user.email
+        )
+        created_user = self.user_service.create_user(user)
+        logger.info(
+            "User registered successfully | user_id={} email={}",
+            created_user["id"],
+            created_user["email"]
+        )
+        return created_user
+
+
+    def login_user(self, data: LoginRequest):
+        logger.info(
+            "Login attempt | email={}",
+            data.email
+        )
+        user = self.user_repo.find_by_email(data.email)
+        if not user:
+            logger.warning(
+                "Login failed - user not found | email={}",
+                data.email
+            )
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
-                detail="Invalid credentials"
+                detail="Invalid email or password"
             )
 
-        payload = {
-            "sub": str(user.id),
-            "role": user.role,
-            "exp": datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
-        }
+        if not verify_password(data.password, user.password):
+            logger.warning(
+                "Login failed - incorrect password | email={}",
+                data.email
+            )
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Invalid email or password"
+            )
 
-        token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)
+        logger.info(
+            "Login successful | user_id={} email={} role={}",
+            user.id,
+            user.email,
+            user.role
+        )
+        token = create_access_token({
+            "user_id": user.id,
+            "email": user.email,
+            "role": user.role
+        })
 
+        logger.debug(
+            "Access token generated | user_id={}",
+            user.id
+        )
         return {
             "access_token": token,
-            "token_type": "bearer"
+            "token_type": "bearer",
+            "user": {
+                "id": user.id,
+                "email": user.email,
+                "role": user.role
+            }
         }

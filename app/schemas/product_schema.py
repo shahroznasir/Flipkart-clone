@@ -2,10 +2,10 @@ from pydantic import BaseModel, Field, ConfigDict
 from typing import Optional
 
 
-# ==============================
 # Base Schema (Shared Fields)
-# ==============================
+
 class ProductBase(BaseModel):
+
     name: str = Field(
         ...,
         min_length=3,
@@ -23,27 +23,35 @@ class ProductBase(BaseModel):
         description="Stock cannot be negative"
     )
 
+# Create Schema (Request)
 
-# ==============================
-# Create Schema
-# ==============================
 class ProductCreate(ProductBase):
     pass
 
+# Update Schema
 
-# ==============================
-# Update Schema (Partial Update)
-# ==============================
 class ProductUpdate(BaseModel):
-    name: Optional[str] = Field(None, min_length=3, max_length=100)
-    price: Optional[float] = Field(None, gt=0)
-    stock: Optional[int] = Field(None, ge=0)
 
+    name: Optional[str] = Field(
+        None,
+        min_length=3,
+        max_length=100
+    )
+    price: Optional[float] = Field(
+        None,
+        gt=0
+    )
+    stock: Optional[int] = Field(
+        None,
+        ge=0
+    )
 
-# ==============================
 # Response Schema
-# ==============================
-class ProductResponse(ProductBase):
-    id: int
 
-    model_config = ConfigDict(from_attributes=True)
+class ProductResponse(ProductBase):
+
+    id: int
+    seller_id: int
+    model_config = ConfigDict(
+        from_attributes=True
+    )

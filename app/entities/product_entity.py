@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Float, ForeignKey
-from app.db import Base
+from app.database import Base
 
 
 class ProductEntity(Base):
@@ -9,5 +9,4 @@ class ProductEntity(Base):
     name = Column(String, nullable=False)
     price = Column(Float, nullable=False)
     stock = Column(Integer, default=0)
-
     seller_id = Column(Integer, ForeignKey("users.id"))

@@ -1,11 +1,18 @@
 fastapi
+starlette
 uvicorn
 sqlalchemy
 psycopg2-binary
 python-jose
 passlib[bcrypt]
 python-dotenv
-python-dotenv
 python-multipart
+loguru
+alembic
+bcrypt==4.0.1
 
-
+# Testing dependencies
+pytest
+pytest-asyncio
+pytest-cov
+httpx

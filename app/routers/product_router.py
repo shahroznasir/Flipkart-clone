@@ -1,102 +1,194 @@
-from fastapi import APIRouter, Depends, HTTPException, status, Query
+from fastapi import APIRouter, Depends, status, Query, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
+from loguru import logger
+from app.schemas.product_schema import (
+    ProductCreate,
+    ProductUpdate,
+    ProductResponse
+)
+from app.database import get_db
+from app.repositories.product_repository import ProductRepository
+from app.services.product_service import ProductService
+from app.dependency import require_roles
 
-from app.entities.user_entity import UserEntity
-from app.entities.product_entity import ProductEntity
-from app.schemas.product_schema import ProductCreate, ProductResponse
-from app.deps import get_db, require_roles
+router = APIRouter(
+    prefix="/products",
+    tags=["Products"]
+)
 
-router = APIRouter(prefix="/products", tags=["Products"])
+# Get All Products (Public)
 
-
-# ==========================
-# LIST PRODUCTS (PUBLIC)
-# ==========================
-@router.get("/", response_model=List[ProductResponse])
+@router.get(
+    "/",
+    response_model=List[ProductResponse]
+)
 def list_products(
-    search: str | None = Query(None),
     db: Session = Depends(get_db)
 ):
-    query = db.query(ProductEntity)
+    logger.info("List all products API called")
+    repo = ProductRepository(db)
+    service = ProductService(repo)
+    products = service.get_all_products()
+    logger.info(f"{len(products)} products returned")
+    return products
 
-    if search:
-        query = query.filter(ProductEntity.name.ilike(f"%{search}%"))
+# Seller Dashboard
 
-    return query.all()
-
-
-# ==========================
-# ADD PRODUCT (SELLER/ADMIN)
-# ==========================
-@router.post(
-    "/",
-    status_code=status.HTTP_201_CREATED,
-    response_model=ProductResponse
+@router.get(
+    "/my-products",
+    response_model=List[ProductResponse]
 )
-def add_product(
-    p: ProductCreate,
+def get_my_products(
     db: Session = Depends(get_db),
-    seller: UserEntity = Depends(require_roles(["seller", "admin"]))
+    user=Depends(require_roles(["admin", "seller"]))
 ):
-    product = ProductEntity(
-        name=p.name,
-        price=p.price,
-        stock=p.stock,
-        seller_id=seller.id
+    logger.info(
+        f"My products API called user_id={user['user_id']}"
+    )
+    repo = ProductRepository(db)
+    service = ProductService(repo)
+    products = service.get_products_by_seller(
+        user["user_id"]
+    )
+    logger.info(
+        f"{len(products)} products returned for seller"
+    )
+    return products
+
+
+# Search Products
+
+@router.get(
+    "/search/",
+    response_model=List[ProductResponse]
+)
+def search_products(
+    keyword: str = Query(..., min_length=1),
+    db: Session = Depends(get_db)
+):
+
+    logger.info(
+        f"Search products API called keyword={keyword}"
+    )
+    repo = ProductRepository(db)
+    service = ProductService(repo)
+    products = service.search_products(keyword)
+    logger.info(
+        f"{len(products)} products found"
     )
 
-    db.add(product)
-    db.commit()
-    db.refresh(product)
+    return products
+
+# Get Product by ID
+
+@router.get(
+    "/{product_id}",
+    response_model=ProductResponse
+)
+def get_product(
+    product_id: int,
+    db: Session = Depends(get_db)
+):
+    logger.info(
+        f"Get product API called product_id={product_id}"
+    )
+    repo = ProductRepository(db)
+    service = ProductService(repo)
+    product = service.get_product_by_id(product_id)
+    if not product:
+        logger.error(
+            f"Product not found product_id={product_id}"
+        )
+        raise HTTPException(
+            status_code=404,
+            detail="Product not found"
+        )
+    logger.success(
+        f"Product fetched successfully product_id={product_id}"
+    )
+    return product
+
+# Create Product
+
+@router.post(
+    "/",
+    response_model=ProductResponse,
+    status_code=status.HTTP_201_CREATED
+)
+def add_product(
+    product_create: ProductCreate,
+    db: Session = Depends(get_db),
+    user=Depends(require_roles(["admin", "seller"]))
+):
+    logger.info(
+        f"Create product API called seller_id={user['user_id']}"
+    )
+    repo = ProductRepository(db)
+    service = ProductService(repo)
+    product = service.create_product(
+        product_create,
+        user["user_id"]
+    )
+    logger.success(
+        f"Product created product_id={product.id}"
+    )
 
     return product
 
+# Update Product
 
-# ==========================
-# UPDATE PRODUCT
-# ==========================
-@router.put("/{product_id}", response_model=ProductResponse)
+@router.put(
+    "/{product_id}",
+    response_model=ProductResponse
+)
 def update_product(
     product_id: int,
-    p: ProductCreate,
+    product_update: ProductUpdate,
     db: Session = Depends(get_db),
-    user: UserEntity = Depends(require_roles(["seller", "admin"]))
+    user=Depends(require_roles(["admin", "seller"]))
 ):
-    product = db.query(ProductEntity).filter(
-        ProductEntity.id == product_id
-    ).first()
-
-    if not product:
-        raise HTTPException(status_code=404, detail="Product not found")
-
-    product.name = p.name
-    product.price = p.price
-    product.stock = p.stock
-
-    db.commit()
-    db.refresh(product)
+    logger.info(
+        f"Update product API called product_id={product_id}"
+    )
+    repo = ProductRepository(db)
+    service = ProductService(repo)
+    product = service.update_product(
+        product_id,
+        product_update,
+        user["user_id"],
+        user["role"]
+    )
+    logger.success(
+        f"Product updated product_id={product_id}"
+    )
 
     return product
 
+# Delete Product
 
-# ==========================
-# DELETE PRODUCT (ADMIN ONLY)
-# ==========================
-@router.delete("/{product_id}", status_code=status.HTTP_200_OK)
+@router.delete(
+    "/{product_id}",
+    status_code=status.HTTP_204_NO_CONTENT
+)
 def delete_product(
     product_id: int,
     db: Session = Depends(get_db),
-    admin: UserEntity = Depends(require_roles(["admin"]))
+    user=Depends(require_roles(["admin", "seller"]))
 ):
-    product = db.query(ProductEntity).filter(
-        ProductEntity.id == product_id
-    ).first()
 
-    if not product:
-        raise HTTPException(status_code=404, detail="Product not found")
+    logger.info(
+        f"Delete product API called product_id={product_id}"
+    )
+    repo = ProductRepository(db)
+    service = ProductService(repo)
+    service.delete_product(
+        product_id,
+        user["user_id"],
+        user["role"]
+    )
 
-    db.delete(product)
-    db.commit()
-
-    return {"message": "Product deleted successfully"}
+    logger.success(
+        f"Product deleted product_id={product_id}"
+    )
+    return None

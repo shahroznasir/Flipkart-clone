@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, Float, String, ForeignKey
 from sqlalchemy.orm import relationship
-from app.db import Base
+from app.database import Base
 
 
 class PaymentEntity(Base):
@@ -10,5 +10,4 @@ class PaymentEntity(Base):
     order_id = Column(Integer, ForeignKey("orders.id"))
     amount = Column(Float, nullable=False)
     status = Column(String, default="success")
-
     order = relationship("OrderEntity")

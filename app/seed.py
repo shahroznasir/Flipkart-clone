@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from passlib.context import CryptContext
 
-from app.db import SessionLocal
+from app.database import SessionLocal
 from app.entities.user_entity import UserEntity
 from app.entities.store_entity import StoreEntity
 from app.entities.product_entity import ProductEntity
@@ -16,9 +16,8 @@ def hash_password(password: str) -> str:
 def seed():
     db: Session = SessionLocal()
 
-    # ==========================
     # USERS
-    # ==========================
+
     admin = db.query(UserEntity).filter_by(email="admin@example.com").first()
     if not admin:
         admin = UserEntity(
@@ -51,9 +50,8 @@ def seed():
     # Refresh seller (needed for seller.id)
     db.refresh(seller)
 
-    # ==========================
     # STORE
-    # ==========================
+
     store = db.query(StoreEntity).filter_by(name="Main Store").first()
     if not store:
         store = StoreEntity(
@@ -64,9 +62,8 @@ def seed():
         db.commit()
         db.refresh(store)
 
-    # ==========================
     # PRODUCTS
-    # ==========================
+
     existing_products = db.query(ProductEntity).count()
 
     if existing_products == 0:
@@ -85,7 +82,7 @@ def seed():
 
     db.close()
 
-    print("✅ Seed data inserted successfully!")
+    print("Seed data inserted successfully!")
 
 
 if __name__ == "__main__":
