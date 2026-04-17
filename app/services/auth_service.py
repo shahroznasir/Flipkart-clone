@@ -7,6 +7,7 @@ from app.repositories.user_repository import UserRepository
 from app.core.security import create_access_token
 from app.utils.security import verify_password
 
+
 class AuthService:
 
     def __init__(
@@ -23,12 +24,15 @@ class AuthService:
             "User registration attempt | email={}",
             user.email
         )
+
         created_user = self.user_service.create_user(user)
+
         logger.info(
             "User registered successfully | user_id={} email={}",
             created_user["id"],
             created_user["email"]
         )
+
         return created_user
 
 
@@ -37,7 +41,9 @@ class AuthService:
             "Login attempt | email={}",
             data.email
         )
+
         user = self.user_repo.find_by_email(data.email)
+
         if not user:
             logger.warning(
                 "Login failed - user not found | email={}",
@@ -45,7 +51,7 @@ class AuthService:
             )
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
-                detail="Invalid email or password"
+                detail="Invalid email"
             )
 
         if not verify_password(data.password, user.password):
@@ -55,7 +61,7 @@ class AuthService:
             )
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
-                detail="Invalid email or password"
+                detail="Invalid password"
             )
 
         logger.info(
@@ -64,6 +70,7 @@ class AuthService:
             user.email,
             user.role
         )
+
         token = create_access_token({
             "user_id": user.id,
             "email": user.email,
@@ -74,11 +81,12 @@ class AuthService:
             "Access token generated | user_id={}",
             user.id
         )
+
         return {
             "access_token": token,
             "token_type": "bearer",
             "user": {
-                "id": user.id,
+                "idtg": user.id,
                 "email": user.email,
                 "role": user.role
             }

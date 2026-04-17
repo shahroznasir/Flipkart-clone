@@ -11,6 +11,9 @@ loguru
 alembic
 bcrypt==4.0.1
 
+httpx
+pydantic
+
 # Testing dependencies
 pytest
 pytest-asyncio

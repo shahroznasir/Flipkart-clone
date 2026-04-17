@@ -19140,3 +19140,1766 @@ Traceback (most recent call last):
           └ <class 'fastapi.exceptions.HTTPException'>
 
 fastapi.exceptions.HTTPException: 401: Authorization header missing
+2026-03-06 17:24:26.149 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 17:24:26.162 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 17:24:26.217 | INFO     | app.main:lifespan:21 - Starting Flipkart Clone API
+2026-03-06 17:24:26.221 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 17:24:26.439 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 17:24:26.473 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 17:24:26.519 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 17:24:26.557 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 17:24:26.594 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 17:24:26.642 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 17:24:26.679 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 17:24:26.709 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 17:24:26.748 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 17:24:26.786 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 17:24:26.835 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 17:24:26.885 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 17:24:26.932 | INFO     | app.routers.product_router:list_products:29 - List all products API called
+2026-03-06 17:24:26.933 | INFO     | app.routers.product_router:list_products:33 - 1 products returned
+2026-03-06 17:24:26.947 | INFO     | app.routers.product_router:get_my_products:46 - My products API called user_id=1
+2026-03-06 17:24:26.948 | INFO     | app.routers.product_router:get_my_products:54 - 1 products returned for seller
+2026-03-06 17:24:26.959 | INFO     | app.routers.product_router:search_products:71 - Search products API called keyword=laptop
+2026-03-06 17:24:26.960 | INFO     | app.routers.product_router:search_products:77 - 1 products found
+2026-03-06 17:24:26.973 | INFO     | app.routers.product_router:get_product:93 - Get product API called product_id=1
+2026-03-06 17:24:26.973 | SUCCESS  | app.routers.product_router:get_product:107 - Product fetched successfully product_id=1
+2026-03-06 17:24:26.991 | INFO     | app.routers.product_router:get_product:93 - Get product API called product_id=999
+2026-03-06 17:24:26.991 | ERROR    | app.routers.product_router:get_product:100 - Product not found product_id=999
+2026-03-06 17:24:27.007 | INFO     | app.routers.product_router:add_product:124 - Create product API called seller_id=1
+2026-03-06 17:24:27.007 | SUCCESS  | app.routers.product_router:add_product:133 - Product created product_id=1
+2026-03-06 17:24:27.024 | INFO     | app.routers.product_router:update_product:151 - Update product API called product_id=1
+2026-03-06 17:24:27.024 | SUCCESS  | app.routers.product_router:update_product:162 - Product updated product_id=1
+2026-03-06 17:24:27.037 | INFO     | app.routers.product_router:delete_product:180 - Delete product API called product_id=1
+2026-03-06 17:24:27.037 | SUCCESS  | app.routers.product_router:delete_product:191 - Product deleted product_id=1
+2026-03-06 17:24:27.051 | INFO     | app.routers.user_router:save_user:23 - Creating new user with email=testuser@example.com
+2026-03-06 17:24:27.051 | ERROR    | app.main:global_exception_handler:45 - Unhandled error: 'UserRequest' object has no attribute 'name'
+Traceback (most recent call last):
+
+  File "C:\Python314\Lib\threading.py", line 1043, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000001F06F6494E0>
+    └ <Thread(asyncio-portal-1f076b92dd0, started daemon 20148)>
+  File "C:\Python314\Lib\threading.py", line 1081, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000001F06F649170>
+    │    │        │   └ <Thread(asyncio-portal-1f076b92dd0, started daemon 20148)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000001F076C99FC0>
+    └ <Thread(asyncio-portal-1f076b92dd0, started daemon 20148)>
+  File "C:\Python314\Lib\threading.py", line 1023, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(asyncio-portal-1f076b92dd0, started daemon 20148)>
+    │    │        │    └ ()
+    │    │        └ <Thread(asyncio-portal-1f076b92dd0, started daemon 20148)>
+    │    └ <function start_blocking_portal.<locals>.run_blocking_portal at 0x000001F076B54A90>
+    └ <Thread(asyncio-portal-1f076b92dd0, started daemon 20148)>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\from_thread.py", line 532, in run_blocking_portal
+    run_eventloop(
+    └ <function run at 0x000001F07054B270>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_core\_eventloop.py", line 77, in run
+    return async_backend.run(func, args, {}, backend_options)
+           │             │   │     │         └ {}
+           │             │   │     └ ()
+           │             │   └ <function start_blocking_portal.<locals>.run_portal at 0x000001F076B54D50>
+           │             └ <classmethod(<function AsyncIOBackend.run at 0x000001F0722789E0>)>
+           └ <class 'anyio._backends._asyncio.AsyncIOBackend'>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2342, in run
+    return runner.run(wrapper())
+           │      │   └ <function start_blocking_portal.<locals>.run_portal at 0x000001F076B55D20>
+           │      └ <function Runner.run at 0x000001F07214A610>
+           └ <asyncio.runners.Runner object at 0x000001F076B90120>
+  File "C:\Python314\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='anyio.from_thread.start_blocking_portal.<locals>.run_portal' coro=<start_blocking_portal.<locals>.run_por...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001F072146980>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001F076B90120>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 706, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x000001F0721468D0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001F072148A90>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001F072170510>
+    └ <Handle Task.task_wakeup()>
+  File "C:\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup()>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\from_thread.py", line 259, in _call_func
+    retval = await retval_or_awaitable
+                   └ <coroutine object FastAPI.__call__ at 0x000001F076D34E40>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <function _TestClientTransport.handle_request.<locals>.send at 0x000001F076B55850>
+                           │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F076AF5E80>
+                           └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function _TestClientTransport.handle_request.<locals>.send at 0x000001F076B55850>
+          │    │                │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F076AF5E80>
+          │    │                └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000001F075A02660>
+          └ <fastapi.applications.FastAPI object at 0x000001F075588830>
+> File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000001F076B55590>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F076AF5E80>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000001F075A02510>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000001F075A02660>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000001F076B55590>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F076AF5E80>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001F075A023C0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001F075A02510>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000001F076B55590>
+          │                            │    │    │     │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F076AF5E80>
+          │                            │    │    │     └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │                            │    │    └ <starlette.requests.Request object at 0x000001F076B55910>
+          │                            │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001F075A00050>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001F075A023C0>
+          └ <function wrap_app_handling_exceptions at 0x000001F073A46FB0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001F076B55BC0>
+          │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F076AF5E80>
+          │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001F075A00050>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001F076B55BC0>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F076AF5E80>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <fastapi.routing.APIRouter object at 0x000001F07558E9C0>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001F075A00050>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001F076B55BC0>
+          │    │                │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F076AF5E80>
+          │    │                └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000001F07558E9C0>>
+          └ <fastapi.routing.APIRouter object at 0x000001F07558E9C0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001F076B55BC0>
+          │     │      │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F076AF5E80>
+          │     │      └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │     └ <function Route.handle at 0x000001F073A6DBC0>
+          └ APIRoute(path='/api/v1/users/', name='save_user', methods=['POST'])
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001F076B55BC0>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F076AF5E80>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <function request_response.<locals>.app at 0x000001F0755A19B0>
+          └ APIRoute(path='/api/v1/users/', name='save_user', methods=['POST'])
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 119, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001F076B55BC0>
+          │                            │    │        │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F076AF5E80>
+          │                            │    │        └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │                            │    └ <starlette.requests.Request object at 0x000001F076B55C80>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000001F076B55E80>
+          └ <function wrap_app_handling_exceptions at 0x000001F073A46FB0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001F076B55220>
+          │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F076AF5E80>
+          │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000001F076B55E80>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 105, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x000001F076B55C80>
+                     └ <function get_request_handler.<locals>.app at 0x000001F0755A1900>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 424, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000001F073A7AE50>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 314, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+                 │                 │         │       └ {'service': <tests.routers.test_user_router.MockUserService object at 0x000001F076BEE900>, 'req': UserRequest(email='testuser...
+                 │                 │         └ <function save_user at 0x000001F075519DD0>
+                 │                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[ModelField(field_info=Body(Pydant...
+                 └ <function run_in_threadpool at 0x000001F0727C0BF0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+                 │     │         │        └ functools.partial(<function save_user at 0x000001F075519DD0>, service=<tests.routers.test_user_router.MockUserService object ...
+                 │     │         └ <function run_sync at 0x000001F07069B3D0>
+                 │     └ <module 'anyio.to_thread' from 'C:\\code\\Flipkart-clone\\venv\\Lib\\site-packages\\anyio\\to_thread.py'>
+                 └ <module 'anyio' from 'C:\\code\\Flipkart-clone\\venv\\Lib\\site-packages\\anyio\\__init__.py'>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+                 └ <function get_async_backend at 0x000001F07069AB90>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+                 └ <Future finished exception=AttributeError("'UserRequest' object has no attribute 'name'")>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+
+  File "C:\code\Flipkart-clone\app\routers\user_router.py", line 25, in save_user
+    name=req.name,
+         └ UserRequest(email='testuser@example.com', password='StrongPass123', role='user')
+
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\pydantic\main.py", line 1026, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+                                 │                                          └ 'name'
+                                 └ UserRequest(email='testuser@example.com', password='StrongPass123', role='user')
+
+AttributeError: 'UserRequest' object has no attribute 'name'
+2026-03-06 17:24:27.092 | INFO     | app.routers.user_router:get_users:39 - Fetching all users
+2026-03-06 17:24:27.092 | INFO     | app.routers.user_router:get_users:41 - 2 users fetched
+2026-03-06 17:24:30.515 | INFO     | app.main:lifespan:30 - Shutting down Flipkart Clone API
+2026-03-06 17:24:30.517 | INFO     | app.main:lifespan:32 - Database connection closed
+2026-03-06 22:43:03.206 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 22:43:03.219 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 22:43:03.256 | INFO     | app.main:lifespan:21 - Starting Flipkart Clone API
+2026-03-06 22:43:03.259 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 22:43:03.423 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 22:43:03.452 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 22:43:03.477 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 22:43:03.502 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 22:43:03.527 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 22:43:03.554 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 22:43:03.578 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 22:43:03.604 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 22:43:03.627 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 22:43:03.658 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 22:43:03.683 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 22:43:03.708 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-06 22:43:03.739 | INFO     | app.routers.product_router:list_products:29 - List all products API called
+2026-03-06 22:43:03.740 | INFO     | app.routers.product_router:list_products:33 - 1 products returned
+2026-03-06 22:43:03.751 | INFO     | app.routers.product_router:get_my_products:46 - My products API called user_id=1
+2026-03-06 22:43:03.751 | INFO     | app.routers.product_router:get_my_products:54 - 1 products returned for seller
+2026-03-06 22:43:03.762 | INFO     | app.routers.product_router:search_products:71 - Search products API called keyword=laptop
+2026-03-06 22:43:03.762 | INFO     | app.routers.product_router:search_products:77 - 1 products found
+2026-03-06 22:43:03.775 | INFO     | app.routers.product_router:get_product:93 - Get product API called product_id=1
+2026-03-06 22:43:03.775 | SUCCESS  | app.routers.product_router:get_product:107 - Product fetched successfully product_id=1
+2026-03-06 22:43:03.788 | INFO     | app.routers.product_router:get_product:93 - Get product API called product_id=999
+2026-03-06 22:43:03.788 | ERROR    | app.routers.product_router:get_product:100 - Product not found product_id=999
+2026-03-06 22:43:03.801 | INFO     | app.routers.product_router:add_product:124 - Create product API called seller_id=1
+2026-03-06 22:43:03.802 | SUCCESS  | app.routers.product_router:add_product:133 - Product created product_id=1
+2026-03-06 22:43:03.816 | INFO     | app.routers.product_router:update_product:151 - Update product API called product_id=1
+2026-03-06 22:43:03.817 | SUCCESS  | app.routers.product_router:update_product:162 - Product updated product_id=1
+2026-03-06 22:43:03.829 | INFO     | app.routers.product_router:delete_product:180 - Delete product API called product_id=1
+2026-03-06 22:43:03.830 | SUCCESS  | app.routers.product_router:delete_product:191 - Product deleted product_id=1
+2026-03-06 22:43:03.842 | INFO     | app.routers.user_router:save_user:23 - Creating new user with email=testuser@example.com
+2026-03-06 22:43:03.843 | ERROR    | app.main:global_exception_handler:45 - Unhandled error: 'UserRequest' object has no attribute 'name'
+Traceback (most recent call last):
+
+  File "C:\Python314\Lib\threading.py", line 1043, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000211A4A494E0>
+    └ <Thread(asyncio-portal-211ac18a9c0, started daemon 15208)>
+  File "C:\Python314\Lib\threading.py", line 1081, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x00000211A4A49170>
+    │    │        │   └ <Thread(asyncio-portal-211ac18a9c0, started daemon 15208)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x00000211ABF2A180>
+    └ <Thread(asyncio-portal-211ac18a9c0, started daemon 15208)>
+  File "C:\Python314\Lib\threading.py", line 1023, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(asyncio-portal-211ac18a9c0, started daemon 15208)>
+    │    │        │    └ ()
+    │    │        └ <Thread(asyncio-portal-211ac18a9c0, started daemon 15208)>
+    │    └ <function start_blocking_portal.<locals>.run_blocking_portal at 0x00000211ABF3CA90>
+    └ <Thread(asyncio-portal-211ac18a9c0, started daemon 15208)>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\from_thread.py", line 532, in run_blocking_portal
+    run_eventloop(
+    └ <function run at 0x00000211A59DB270>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_core\_eventloop.py", line 77, in run
+    return async_backend.run(func, args, {}, backend_options)
+           │             │   │     │         └ {}
+           │             │   │     └ ()
+           │             │   └ <function start_blocking_portal.<locals>.run_portal at 0x00000211ABF3CD50>
+           │             └ <classmethod(<function AsyncIOBackend.run at 0x00000211A77589E0>)>
+           └ <class 'anyio._backends._asyncio.AsyncIOBackend'>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2342, in run
+    return runner.run(wrapper())
+           │      │   └ <function start_blocking_portal.<locals>.run_portal at 0x00000211ABF3D640>
+           │      └ <function Runner.run at 0x00000211A7626610>
+           └ <asyncio.runners.Runner object at 0x00000211AC18BEE0>
+  File "C:\Python314\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='anyio.from_thread.start_blocking_portal.<locals>.run_portal' coro=<start_blocking_portal.<locals>.run_por...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x00000211A7622980>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x00000211AC18BEE0>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 706, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x00000211A76228D0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x00000211A7624A90>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x00000211A764C510>
+    └ <Handle Task.task_wakeup()>
+  File "C:\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup()>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\from_thread.py", line 259, in _call_func
+    retval = await retval_or_awaitable
+                   └ <coroutine object FastAPI.__call__ at 0x00000211AC0F5240>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <function _TestClientTransport.handle_request.<locals>.send at 0x00000211ABF3CEB0>
+                           │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x00000211ABF3C880>
+                           └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function _TestClientTransport.handle_request.<locals>.send at 0x00000211ABF3CEB0>
+          │    │                │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x00000211ABF3C880>
+          │    │                └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x00000211AADF2660>
+          └ <fastapi.applications.FastAPI object at 0x00000211AA968830>
+> File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x00000211ABF3D220>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x00000211ABF3C880>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x00000211AADF2510>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x00000211AADF2660>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x00000211ABF3D220>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x00000211ABF3C880>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x00000211AADF23C0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x00000211AADF2510>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x00000211ABF3D220>
+          │                            │    │    │     │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x00000211ABF3C880>
+          │                            │    │    │     └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │                            │    │    └ <starlette.requests.Request object at 0x00000211ABF3D440>
+          │                            │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x00000211AADF0050>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x00000211AADF23C0>
+          └ <function wrap_app_handling_exceptions at 0x00000211A8EE6FB0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x00000211ABF3CCA0>
+          │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x00000211ABF3C880>
+          │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x00000211AADF0050>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x00000211ABF3CCA0>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x00000211ABF3C880>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <fastapi.routing.APIRouter object at 0x00000211AA96E9C0>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x00000211AADF0050>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x00000211ABF3CCA0>
+          │    │                │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x00000211ABF3C880>
+          │    │                └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x00000211AA96E9C0>>
+          └ <fastapi.routing.APIRouter object at 0x00000211AA96E9C0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x00000211ABF3CCA0>
+          │     │      │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x00000211ABF3C880>
+          │     │      └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │     └ <function Route.handle at 0x00000211A8F0DBC0>
+          └ APIRoute(path='/api/v1/users/', name='save_user', methods=['POST'])
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x00000211ABF3CCA0>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x00000211ABF3C880>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <function request_response.<locals>.app at 0x00000211AA9819B0>
+          └ APIRoute(path='/api/v1/users/', name='save_user', methods=['POST'])
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 119, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x00000211ABF3CCA0>
+          │                            │    │        │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x00000211ABF3C880>
+          │                            │    │        └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │                            │    └ <starlette.requests.Request object at 0x00000211ABF3D9C0>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x00000211ABF3DB10>
+          └ <function wrap_app_handling_exceptions at 0x00000211A8EE6FB0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x00000211ABF3DE80>
+          │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x00000211ABF3C880>
+          │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          └ <function request_response.<locals>.app.<locals>.app at 0x00000211ABF3DB10>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 105, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x00000211ABF3D9C0>
+                     └ <function get_request_handler.<locals>.app at 0x00000211AA981900>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 424, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x00000211A8F1AE50>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 314, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+                 │                 │         │       └ {'service': <tests.routers.test_user_router.MockUserService object at 0x00000211ABFF2900>, 'req': UserRequest(email='testuser...
+                 │                 │         └ <function save_user at 0x00000211AA8FDDD0>
+                 │                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[ModelField(field_info=Body(Pydant...
+                 └ <function run_in_threadpool at 0x00000211A7C60BF0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+                 │     │         │        └ functools.partial(<function save_user at 0x00000211AA8FDDD0>, service=<tests.routers.test_user_router.MockUserService object ...
+                 │     │         └ <function run_sync at 0x00000211A5B273D0>
+                 │     └ <module 'anyio.to_thread' from 'C:\\code\\Flipkart-clone\\venv\\Lib\\site-packages\\anyio\\to_thread.py'>
+                 └ <module 'anyio' from 'C:\\code\\Flipkart-clone\\venv\\Lib\\site-packages\\anyio\\__init__.py'>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+                 └ <function get_async_backend at 0x00000211A5B26B90>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+                 └ <Future finished exception=AttributeError("'UserRequest' object has no attribute 'name'")>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+
+  File "C:\code\Flipkart-clone\app\routers\user_router.py", line 25, in save_user
+    name=req.name,
+         └ UserRequest(email='testuser@example.com', password='StrongPass123', role='user')
+
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\pydantic\main.py", line 1026, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+                                 │                                          └ 'name'
+                                 └ UserRequest(email='testuser@example.com', password='StrongPass123', role='user')
+
+AttributeError: 'UserRequest' object has no attribute 'name'
+2026-03-06 22:43:03.873 | INFO     | app.routers.user_router:get_users:39 - Fetching all users
+2026-03-06 22:43:03.873 | INFO     | app.routers.user_router:get_users:41 - 2 users fetched
+2026-03-06 22:43:06.241 | INFO     | app.main:lifespan:30 - Shutting down Flipkart Clone API
+2026-03-06 22:43:06.241 | INFO     | app.main:lifespan:32 - Database connection closed
+2026-03-07 22:33:21.636 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:33:21.648 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:33:21.699 | INFO     | app.main:lifespan:21 - Starting Flipkart Clone API
+2026-03-07 22:33:21.705 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:33:21.878 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:33:21.904 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:33:21.934 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:33:21.961 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:33:21.999 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:33:22.036 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:33:22.065 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:33:22.097 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:33:22.126 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:33:22.159 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:33:22.196 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:33:22.225 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:33:22.264 | INFO     | app.routers.product_router:list_products:29 - List all products API called
+2026-03-07 22:33:22.264 | INFO     | app.routers.product_router:list_products:33 - 1 products returned
+2026-03-07 22:33:22.280 | INFO     | app.routers.product_router:get_my_products:46 - My products API called user_id=1
+2026-03-07 22:33:22.281 | INFO     | app.routers.product_router:get_my_products:54 - 1 products returned for seller
+2026-03-07 22:33:22.297 | INFO     | app.routers.product_router:search_products:71 - Search products API called keyword=laptop
+2026-03-07 22:33:22.298 | INFO     | app.routers.product_router:search_products:77 - 1 products found
+2026-03-07 22:33:22.311 | INFO     | app.routers.product_router:get_product:93 - Get product API called product_id=1
+2026-03-07 22:33:22.312 | SUCCESS  | app.routers.product_router:get_product:107 - Product fetched successfully product_id=1
+2026-03-07 22:33:22.323 | INFO     | app.routers.product_router:get_product:93 - Get product API called product_id=999
+2026-03-07 22:33:22.323 | ERROR    | app.routers.product_router:get_product:100 - Product not found product_id=999
+2026-03-07 22:33:22.336 | INFO     | app.routers.product_router:add_product:124 - Create product API called seller_id=1
+2026-03-07 22:33:22.338 | SUCCESS  | app.routers.product_router:add_product:133 - Product created product_id=1
+2026-03-07 22:33:22.353 | INFO     | app.routers.product_router:update_product:151 - Update product API called product_id=1
+2026-03-07 22:33:22.354 | SUCCESS  | app.routers.product_router:update_product:162 - Product updated product_id=1
+2026-03-07 22:33:22.366 | INFO     | app.routers.product_router:delete_product:180 - Delete product API called product_id=1
+2026-03-07 22:33:22.367 | SUCCESS  | app.routers.product_router:delete_product:191 - Product deleted product_id=1
+2026-03-07 22:33:22.380 | INFO     | app.routers.user_router:save_user:23 - Creating new user with email=testuser@example.com
+2026-03-07 22:33:22.380 | ERROR    | app.main:global_exception_handler:45 - Unhandled error: 'UserRequest' object has no attribute 'name'
+Traceback (most recent call last):
+
+  File "C:\Python314\Lib\threading.py", line 1043, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x0000029D545E94E0>
+    └ <Thread(asyncio-portal-29d5bc269c0, started daemon 4932)>
+  File "C:\Python314\Lib\threading.py", line 1081, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x0000029D545E9170>
+    │    │        │   └ <Thread(asyncio-portal-29d5bc269c0, started daemon 4932)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x0000029D5B9BB480>
+    └ <Thread(asyncio-portal-29d5bc269c0, started daemon 4932)>
+  File "C:\Python314\Lib\threading.py", line 1023, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(asyncio-portal-29d5bc269c0, started daemon 4932)>
+    │    │        │    └ ()
+    │    │        └ <Thread(asyncio-portal-29d5bc269c0, started daemon 4932)>
+    │    └ <function start_blocking_portal.<locals>.run_blocking_portal at 0x0000029D5B9E0A90>
+    └ <Thread(asyncio-portal-29d5bc269c0, started daemon 4932)>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\from_thread.py", line 532, in run_blocking_portal
+    run_eventloop(
+    └ <function run at 0x0000029D554EB270>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_core\_eventloop.py", line 77, in run
+    return async_backend.run(func, args, {}, backend_options)
+           │             │   │     │         └ {}
+           │             │   │     └ ()
+           │             │   └ <function start_blocking_portal.<locals>.run_portal at 0x0000029D5B9E0D50>
+           │             └ <classmethod(<function AsyncIOBackend.run at 0x0000029D571D89E0>)>
+           └ <class 'anyio._backends._asyncio.AsyncIOBackend'>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2342, in run
+    return runner.run(wrapper())
+           │      │   └ <function start_blocking_portal.<locals>.run_portal at 0x0000029D5B9E1430>
+           │      └ <function Runner.run at 0x0000029D570AA610>
+           └ <asyncio.runners.Runner object at 0x0000029D5BC27EE0>
+  File "C:\Python314\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='anyio.from_thread.start_blocking_portal.<locals>.run_portal' coro=<start_blocking_portal.<locals>.run_por...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x0000029D570A6980>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x0000029D5BC27EE0>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 706, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000029D570A68D0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000029D570A8A90>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000029D570CC510>
+    └ <Handle Task.task_wakeup()>
+  File "C:\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup()>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\from_thread.py", line 259, in _call_func
+    retval = await retval_or_awaitable
+                   └ <coroutine object FastAPI.__call__ at 0x0000029D5BABAD40>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <function _TestClientTransport.handle_request.<locals>.send at 0x0000029D5B9E1850>
+                           │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000029D5B9E0880>
+                           └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function _TestClientTransport.handle_request.<locals>.send at 0x0000029D5B9E1850>
+          │    │                │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000029D5B9E0880>
+          │    │                └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x0000029D5BAFA510>
+          └ <fastapi.applications.FastAPI object at 0x0000029D5A40C6E0>
+> File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x0000029D5B9E1220>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000029D5B9E0880>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x0000029D5BAFA3C0>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x0000029D5BAFA510>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x0000029D5B9E1220>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000029D5B9E0880>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x0000029D5BAFA270>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x0000029D5BAFA3C0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x0000029D5B9E1220>
+          │                            │    │    │     │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000029D5B9E0880>
+          │                            │    │    │     └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │                            │    │    └ <starlette.requests.Request object at 0x0000029D5B9E14F0>
+          │                            │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x0000029D5A92FE00>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x0000029D5BAFA270>
+          └ <function wrap_app_handling_exceptions at 0x0000029D58996FB0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000029D5B9E1900>
+          │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000029D5B9E0880>
+          │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x0000029D5A92FE00>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000029D5B9E1900>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000029D5B9E0880>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <fastapi.routing.APIRouter object at 0x0000029D5A40A9C0>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x0000029D5A92FE00>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000029D5B9E1900>
+          │    │                │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000029D5B9E0880>
+          │    │                └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x0000029D5A40A9C0>>
+          └ <fastapi.routing.APIRouter object at 0x0000029D5A40A9C0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000029D5B9E1900>
+          │     │      │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000029D5B9E0880>
+          │     │      └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │     └ <function Route.handle at 0x0000029D589B9BC0>
+          └ APIRoute(path='/api/v1/users/', name='save_user', methods=['POST'])
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000029D5B9E1900>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000029D5B9E0880>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <function request_response.<locals>.app at 0x0000029D5A4219B0>
+          └ APIRoute(path='/api/v1/users/', name='save_user', methods=['POST'])
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 119, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000029D5B9E1900>
+          │                            │    │        │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000029D5B9E0880>
+          │                            │    │        └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │                            │    └ <starlette.requests.Request object at 0x0000029D5B9E19C0>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x0000029D5B9E1B10>
+          └ <function wrap_app_handling_exceptions at 0x0000029D58996FB0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000029D5B9E1E80>
+          │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000029D5B9E0880>
+          │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          └ <function request_response.<locals>.app.<locals>.app at 0x0000029D5B9E1B10>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 105, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x0000029D5B9E19C0>
+                     └ <function get_request_handler.<locals>.app at 0x0000029D5A421900>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 424, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x0000029D589CAE50>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 314, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+                 │                 │         │       └ {'service': <tests.routers.test_user_router.MockUserService object at 0x0000029D5BA927B0>, 'req': UserRequest(email='testuser...
+                 │                 │         └ <function save_user at 0x0000029D5A39DDD0>
+                 │                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[ModelField(field_info=Body(Pydant...
+                 └ <function run_in_threadpool at 0x0000029D57710BF0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+                 │     │         │        └ functools.partial(<function save_user at 0x0000029D5A39DDD0>, service=<tests.routers.test_user_router.MockUserService object ...
+                 │     │         └ <function run_sync at 0x0000029D556373D0>
+                 │     └ <module 'anyio.to_thread' from 'C:\\code\\Flipkart-clone\\venv\\Lib\\site-packages\\anyio\\to_thread.py'>
+                 └ <module 'anyio' from 'C:\\code\\Flipkart-clone\\venv\\Lib\\site-packages\\anyio\\__init__.py'>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+                 └ <function get_async_backend at 0x0000029D55636B90>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+                 └ <Future finished exception=AttributeError("'UserRequest' object has no attribute 'name'")>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+
+  File "C:\code\Flipkart-clone\app\routers\user_router.py", line 25, in save_user
+    name=req.name,
+         └ UserRequest(email='testuser@example.com', password='StrongPass123', role='user')
+
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\pydantic\main.py", line 1026, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+                                 │                                          └ 'name'
+                                 └ UserRequest(email='testuser@example.com', password='StrongPass123', role='user')
+
+AttributeError: 'UserRequest' object has no attribute 'name'
+2026-03-07 22:33:22.412 | INFO     | app.routers.user_router:get_users:39 - Fetching all users
+2026-03-07 22:33:22.413 | INFO     | app.routers.user_router:get_users:41 - 2 users fetched
+2026-03-07 22:33:25.762 | INFO     | app.main:lifespan:30 - Shutting down Flipkart Clone API
+2026-03-07 22:33:25.763 | INFO     | app.main:lifespan:32 - Database connection closed
+2026-03-07 22:49:16.915 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:49:16.927 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:49:16.976 | INFO     | app.main:lifespan:21 - Starting Flipkart Clone API
+2026-03-07 22:49:16.979 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:49:17.115 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:49:17.146 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:49:17.178 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:49:17.203 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:49:17.230 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:49:17.263 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:49:17.290 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:49:17.317 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:49:17.346 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:49:17.375 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:49:17.401 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:49:17.427 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-07 22:49:17.457 | INFO     | app.routers.product_router:list_products:29 - List all products API called
+2026-03-07 22:49:17.457 | INFO     | app.routers.product_router:list_products:33 - 1 products returned
+2026-03-07 22:49:17.468 | INFO     | app.routers.product_router:get_my_products:46 - My products API called user_id=1
+2026-03-07 22:49:17.468 | INFO     | app.routers.product_router:get_my_products:54 - 1 products returned for seller
+2026-03-07 22:49:17.480 | INFO     | app.routers.product_router:search_products:71 - Search products API called keyword=laptop
+2026-03-07 22:49:17.481 | INFO     | app.routers.product_router:search_products:77 - 1 products found
+2026-03-07 22:49:17.490 | INFO     | app.routers.product_router:get_product:93 - Get product API called product_id=1
+2026-03-07 22:49:17.491 | SUCCESS  | app.routers.product_router:get_product:107 - Product fetched successfully product_id=1
+2026-03-07 22:49:17.501 | INFO     | app.routers.product_router:get_product:93 - Get product API called product_id=999
+2026-03-07 22:49:17.501 | ERROR    | app.routers.product_router:get_product:100 - Product not found product_id=999
+2026-03-07 22:49:17.514 | INFO     | app.routers.product_router:add_product:124 - Create product API called seller_id=1
+2026-03-07 22:49:17.514 | SUCCESS  | app.routers.product_router:add_product:133 - Product created product_id=1
+2026-03-07 22:49:17.523 | INFO     | app.routers.product_router:update_product:151 - Update product API called product_id=1
+2026-03-07 22:49:17.524 | SUCCESS  | app.routers.product_router:update_product:162 - Product updated product_id=1
+2026-03-07 22:49:17.534 | INFO     | app.routers.product_router:delete_product:180 - Delete product API called product_id=1
+2026-03-07 22:49:17.534 | SUCCESS  | app.routers.product_router:delete_product:191 - Product deleted product_id=1
+2026-03-07 22:49:17.545 | INFO     | app.routers.user_router:save_user:23 - Creating new user with email=testuser@example.com
+2026-03-07 22:49:17.546 | ERROR    | app.main:global_exception_handler:45 - Unhandled error: 'UserRequest' object has no attribute 'name'
+Traceback (most recent call last):
+
+  File "C:\Python314\Lib\threading.py", line 1043, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000001A3CC7494E0>
+    └ <Thread(asyncio-portal-1a3d3dba9c0, started daemon 19548)>
+  File "C:\Python314\Lib\threading.py", line 1081, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000001A3CC749170>
+    │    │        │   └ <Thread(asyncio-portal-1a3d3dba9c0, started daemon 19548)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000001A3D3B65300>
+    └ <Thread(asyncio-portal-1a3d3dba9c0, started daemon 19548)>
+  File "C:\Python314\Lib\threading.py", line 1023, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(asyncio-portal-1a3d3dba9c0, started daemon 19548)>
+    │    │        │    └ ()
+    │    │        └ <Thread(asyncio-portal-1a3d3dba9c0, started daemon 19548)>
+    │    └ <function start_blocking_portal.<locals>.run_blocking_portal at 0x000001A3D3B7CA90>
+    └ <Thread(asyncio-portal-1a3d3dba9c0, started daemon 19548)>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\from_thread.py", line 532, in run_blocking_portal
+    run_eventloop(
+    └ <function run at 0x000001A3CD64B270>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_core\_eventloop.py", line 77, in run
+    return async_backend.run(func, args, {}, backend_options)
+           │             │   │     │         └ {}
+           │             │   │     └ ()
+           │             │   └ <function start_blocking_portal.<locals>.run_portal at 0x000001A3D3B7CBF0>
+           │             └ <classmethod(<function AsyncIOBackend.run at 0x000001A3CF3789E0>)>
+           └ <class 'anyio._backends._asyncio.AsyncIOBackend'>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2342, in run
+    return runner.run(wrapper())
+           │      │   └ <function start_blocking_portal.<locals>.run_portal at 0x000001A3D3B7DD20>
+           │      └ <function Runner.run at 0x000001A3CF252610>
+           └ <asyncio.runners.Runner object at 0x000001A3D3DBBEE0>
+  File "C:\Python314\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='anyio.from_thread.start_blocking_portal.<locals>.run_portal' coro=<start_blocking_portal.<locals>.run_por...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001A3CF24E980>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001A3D3DBBEE0>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 706, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x000001A3CF24E8D0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001A3CF250A90>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001A3CF270510>
+    └ <Handle Task.task_wakeup()>
+  File "C:\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup()>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\from_thread.py", line 259, in _call_func
+    retval = await retval_or_awaitable
+                   └ <coroutine object FastAPI.__call__ at 0x000001A3D3CB0F40>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <function _TestClientTransport.handle_request.<locals>.send at 0x000001A3D3B7D850>
+                           │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001A3D3B7C880>
+                           └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function _TestClientTransport.handle_request.<locals>.send at 0x000001A3D3B7D850>
+          │    │                │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001A3D3B7C880>
+          │    │                └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000001A3D2A32660>
+          └ <fastapi.applications.FastAPI object at 0x000001A3D25A8830>
+> File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000001A3D3B7D380>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001A3D3B7C880>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000001A3D2A32510>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000001A3D2A32660>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000001A3D3B7D380>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001A3D3B7C880>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001A3D2A323C0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001A3D2A32510>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000001A3D3B7D380>
+          │                            │    │    │     │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001A3D3B7C880>
+          │                            │    │    │     └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │                            │    │    └ <starlette.requests.Request object at 0x000001A3D3B7D5A0>
+          │                            │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001A3D2A30050>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001A3D2A323C0>
+          └ <function wrap_app_handling_exceptions at 0x000001A3D0B06FB0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001A3D3B7DA60>
+          │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001A3D3B7C880>
+          │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001A3D2A30050>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001A3D3B7DA60>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001A3D3B7C880>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <fastapi.routing.APIRouter object at 0x000001A3D25AE9C0>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001A3D2A30050>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001A3D3B7DA60>
+          │    │                │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001A3D3B7C880>
+          │    │                └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000001A3D25AE9C0>>
+          └ <fastapi.routing.APIRouter object at 0x000001A3D25AE9C0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001A3D3B7DA60>
+          │     │      │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001A3D3B7C880>
+          │     │      └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │     └ <function Route.handle at 0x000001A3D0B29BC0>
+          └ APIRoute(path='/api/v1/users/', name='save_user', methods=['POST'])
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001A3D3B7DA60>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001A3D3B7C880>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <function request_response.<locals>.app at 0x000001A3D25C19B0>
+          └ APIRoute(path='/api/v1/users/', name='save_user', methods=['POST'])
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 119, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001A3D3B7DA60>
+          │                            │    │        │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001A3D3B7C880>
+          │                            │    │        └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │                            │    └ <starlette.requests.Request object at 0x000001A3D3B7DB20>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000001A3D3B7DBC0>
+          └ <function wrap_app_handling_exceptions at 0x000001A3D0B06FB0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001A3D3B7DFE0>
+          │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001A3D3B7C880>
+          │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000001A3D3B7DBC0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 105, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x000001A3D3B7DB20>
+                     └ <function get_request_handler.<locals>.app at 0x000001A3D25C1900>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 424, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000001A3D0B3AE50>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 314, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+                 │                 │         │       └ {'service': <tests.routers.test_user_router.MockUserService object at 0x000001A3D3C2E900>, 'req': UserRequest(email='testuser...
+                 │                 │         └ <function save_user at 0x000001A3D253DDD0>
+                 │                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[ModelField(field_info=Body(Pydant...
+                 └ <function run_in_threadpool at 0x000001A3CF880BF0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+                 │     │         │        └ functools.partial(<function save_user at 0x000001A3D253DDD0>, service=<tests.routers.test_user_router.MockUserService object ...
+                 │     │         └ <function run_sync at 0x000001A3CD7973D0>
+                 │     └ <module 'anyio.to_thread' from 'C:\\code\\Flipkart-clone\\venv\\Lib\\site-packages\\anyio\\to_thread.py'>
+                 └ <module 'anyio' from 'C:\\code\\Flipkart-clone\\venv\\Lib\\site-packages\\anyio\\__init__.py'>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+                 └ <function get_async_backend at 0x000001A3CD796B90>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+                 └ <Future finished exception=AttributeError("'UserRequest' object has no attribute 'name'")>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+
+  File "C:\code\Flipkart-clone\app\routers\user_router.py", line 25, in save_user
+    name=req.name,
+         └ UserRequest(email='testuser@example.com', password='StrongPass123', role='user')
+
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\pydantic\main.py", line 1026, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+                                 │                                          └ 'name'
+                                 └ UserRequest(email='testuser@example.com', password='StrongPass123', role='user')
+
+AttributeError: 'UserRequest' object has no attribute 'name'
+2026-03-07 22:49:17.575 | INFO     | app.routers.user_router:get_users:39 - Fetching all users
+2026-03-07 22:49:17.575 | INFO     | app.routers.user_router:get_users:41 - 2 users fetched
+2026-03-07 22:49:20.801 | INFO     | app.main:lifespan:30 - Shutting down Flipkart Clone API
+2026-03-07 22:49:20.802 | INFO     | app.main:lifespan:32 - Database connection closed
+2026-03-08 22:15:19.558 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-08 22:15:19.575 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-08 22:15:19.616 | INFO     | app.main:lifespan:21 - Starting Flipkart Clone API
+2026-03-08 22:15:19.621 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-08 22:15:19.827 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-08 22:15:19.867 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-08 22:15:19.902 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-08 22:15:19.938 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-08 22:15:19.966 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-08 22:15:19.999 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-08 22:15:20.035 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-08 22:15:20.068 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-08 22:15:20.097 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-08 22:15:20.137 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-08 22:15:20.167 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-08 22:15:20.196 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-08 22:15:20.230 | INFO     | app.routers.product_router:list_products:29 - List all products API called
+2026-03-08 22:15:20.231 | INFO     | app.routers.product_router:list_products:33 - 1 products returned
+2026-03-08 22:15:20.247 | INFO     | app.routers.product_router:get_my_products:46 - My products API called user_id=1
+2026-03-08 22:15:20.248 | INFO     | app.routers.product_router:get_my_products:54 - 1 products returned for seller
+2026-03-08 22:15:20.261 | INFO     | app.routers.product_router:search_products:71 - Search products API called keyword=laptop
+2026-03-08 22:15:20.262 | INFO     | app.routers.product_router:search_products:77 - 1 products found
+2026-03-08 22:15:20.273 | INFO     | app.routers.product_router:get_product:93 - Get product API called product_id=1
+2026-03-08 22:15:20.274 | SUCCESS  | app.routers.product_router:get_product:107 - Product fetched successfully product_id=1
+2026-03-08 22:15:20.288 | INFO     | app.routers.product_router:get_product:93 - Get product API called product_id=999
+2026-03-08 22:15:20.288 | ERROR    | app.routers.product_router:get_product:100 - Product not found product_id=999
+2026-03-08 22:15:20.300 | INFO     | app.routers.product_router:add_product:124 - Create product API called seller_id=1
+2026-03-08 22:15:20.301 | SUCCESS  | app.routers.product_router:add_product:133 - Product created product_id=1
+2026-03-08 22:15:20.317 | INFO     | app.routers.product_router:update_product:151 - Update product API called product_id=1
+2026-03-08 22:15:20.318 | SUCCESS  | app.routers.product_router:update_product:162 - Product updated product_id=1
+2026-03-08 22:15:20.330 | INFO     | app.routers.product_router:delete_product:180 - Delete product API called product_id=1
+2026-03-08 22:15:20.331 | SUCCESS  | app.routers.product_router:delete_product:191 - Product deleted product_id=1
+2026-03-08 22:15:20.344 | INFO     | app.routers.user_router:save_user:23 - Creating new user with email=testuser@example.com
+2026-03-08 22:15:20.345 | ERROR    | app.main:global_exception_handler:45 - Unhandled error: 'UserRequest' object has no attribute 'name'
+Traceback (most recent call last):
+
+  File "C:\Python314\Lib\threading.py", line 1043, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x0000028AE8AC94E0>
+    └ <Thread(asyncio-portal-28af01c69c0, started daemon 18868)>
+  File "C:\Python314\Lib\threading.py", line 1081, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x0000028AE8AC9170>
+    │    │        │   └ <Thread(asyncio-portal-28af01c69c0, started daemon 18868)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x0000028AEFF68C80>
+    └ <Thread(asyncio-portal-28af01c69c0, started daemon 18868)>
+  File "C:\Python314\Lib\threading.py", line 1023, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(asyncio-portal-28af01c69c0, started daemon 18868)>
+    │    │        │    └ ()
+    │    │        └ <Thread(asyncio-portal-28af01c69c0, started daemon 18868)>
+    │    └ <function start_blocking_portal.<locals>.run_blocking_portal at 0x0000028AEFF7CA90>
+    └ <Thread(asyncio-portal-28af01c69c0, started daemon 18868)>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\from_thread.py", line 532, in run_blocking_portal
+    run_eventloop(
+    └ <function run at 0x0000028AE9A1B270>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_core\_eventloop.py", line 77, in run
+    return async_backend.run(func, args, {}, backend_options)
+           │             │   │     │         └ {}
+           │             │   │     └ ()
+           │             │   └ <function start_blocking_portal.<locals>.run_portal at 0x0000028AEFF7CD50>
+           │             └ <classmethod(<function AsyncIOBackend.run at 0x0000028AEB7989E0>)>
+           └ <class 'anyio._backends._asyncio.AsyncIOBackend'>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2342, in run
+    return runner.run(wrapper())
+           │      │   └ <function start_blocking_portal.<locals>.run_portal at 0x0000028AEFF7D010>
+           │      └ <function Runner.run at 0x0000028AEB66A610>
+           └ <asyncio.runners.Runner object at 0x0000028AF01C5230>
+  File "C:\Python314\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='anyio.from_thread.start_blocking_portal.<locals>.run_portal' coro=<start_blocking_portal.<locals>.run_por...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x0000028AEB666980>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x0000028AF01C5230>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 706, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000028AEB6668D0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000028AEB668A90>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000028AEB68C510>
+    └ <Handle Task.task_wakeup()>
+  File "C:\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup()>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\from_thread.py", line 259, in _call_func
+    retval = await retval_or_awaitable
+                   └ <coroutine object FastAPI.__call__ at 0x0000028AF01AD040>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <function _TestClientTransport.handle_request.<locals>.send at 0x0000028AEFF7CCA0>
+                           │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000028AEFF7C880>
+                           └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function _TestClientTransport.handle_request.<locals>.send at 0x0000028AEFF7CCA0>
+          │    │                │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000028AEFF7C880>
+          │    │                └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x0000028AEEE32660>
+          └ <fastapi.applications.FastAPI object at 0x0000028AEE9A8830>
+> File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x0000028AEFF7D380>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000028AEFF7C880>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x0000028AEEE32510>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x0000028AEEE32660>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x0000028AEFF7D380>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000028AEFF7C880>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x0000028AEEE323C0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x0000028AEEE32510>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x0000028AEFF7D380>
+          │                            │    │    │     │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000028AEFF7C880>
+          │                            │    │    │     └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │                            │    │    └ <starlette.requests.Request object at 0x0000028AEFF7D5A0>
+          │                            │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x0000028AEEE30050>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x0000028AEEE323C0>
+          └ <function wrap_app_handling_exceptions at 0x0000028AECF22FB0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000028AEFF7DA60>
+          │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000028AEFF7C880>
+          │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x0000028AEEE30050>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000028AEFF7DA60>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000028AEFF7C880>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <fastapi.routing.APIRouter object at 0x0000028AEE9AE9C0>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x0000028AEEE30050>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000028AEFF7DA60>
+          │    │                │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000028AEFF7C880>
+          │    │                └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x0000028AEE9AE9C0>>
+          └ <fastapi.routing.APIRouter object at 0x0000028AEE9AE9C0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000028AEFF7DA60>
+          │     │      │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000028AEFF7C880>
+          │     │      └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │     └ <function Route.handle at 0x0000028AECF49BC0>
+          └ APIRoute(path='/api/v1/users/', name='save_user', methods=['POST'])
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000028AEFF7DA60>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000028AEFF7C880>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <function request_response.<locals>.app at 0x0000028AEE9C19B0>
+          └ APIRoute(path='/api/v1/users/', name='save_user', methods=['POST'])
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 119, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000028AEFF7DA60>
+          │                            │    │        │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000028AEFF7C880>
+          │                            │    │        └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │                            │    └ <starlette.requests.Request object at 0x0000028AEFF7DB20>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x0000028AEFF7DBC0>
+          └ <function wrap_app_handling_exceptions at 0x0000028AECF22FB0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000028AEFF7DFE0>
+          │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x0000028AEFF7C880>
+          │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          └ <function request_response.<locals>.app.<locals>.app at 0x0000028AEFF7DBC0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 105, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x0000028AEFF7DB20>
+                     └ <function get_request_handler.<locals>.app at 0x0000028AEE9C1900>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 424, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x0000028AECF5AE50>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 314, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+                 │                 │         │       └ {'service': <tests.routers.test_user_router.MockUserService object at 0x0000028AF0036900>, 'req': UserRequest(email='testuser...
+                 │                 │         └ <function save_user at 0x0000028AEE939DD0>
+                 │                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[ModelField(field_info=Body(Pydant...
+                 └ <function run_in_threadpool at 0x0000028AEBCA0BF0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+                 │     │         │        └ functools.partial(<function save_user at 0x0000028AEE939DD0>, service=<tests.routers.test_user_router.MockUserService object ...
+                 │     │         └ <function run_sync at 0x0000028AE9B6B3D0>
+                 │     └ <module 'anyio.to_thread' from 'C:\\code\\Flipkart-clone\\venv\\Lib\\site-packages\\anyio\\to_thread.py'>
+                 └ <module 'anyio' from 'C:\\code\\Flipkart-clone\\venv\\Lib\\site-packages\\anyio\\__init__.py'>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+                 └ <function get_async_backend at 0x0000028AE9B6AB90>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+                 └ <Future finished exception=AttributeError("'UserRequest' object has no attribute 'name'")>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+
+  File "C:\code\Flipkart-clone\app\routers\user_router.py", line 25, in save_user
+    name=req.name,
+         └ UserRequest(email='testuser@example.com', password='StrongPass123', role='user')
+
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\pydantic\main.py", line 1026, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+                                 │                                          └ 'name'
+                                 └ UserRequest(email='testuser@example.com', password='StrongPass123', role='user')
+
+AttributeError: 'UserRequest' object has no attribute 'name'
+2026-03-08 22:15:20.388 | INFO     | app.routers.user_router:get_users:39 - Fetching all users
+2026-03-08 22:15:20.389 | INFO     | app.routers.user_router:get_users:41 - 2 users fetched
+2026-03-08 22:15:23.561 | INFO     | app.main:lifespan:30 - Shutting down Flipkart Clone API
+2026-03-08 22:15:23.562 | INFO     | app.main:lifespan:32 - Database connection closed
+2026-03-13 03:55:43.371 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-13 03:55:43.384 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-13 03:55:43.448 | INFO     | app.main:lifespan:21 - Starting Flipkart Clone API
+2026-03-13 03:55:43.454 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-13 03:55:43.645 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-13 03:55:43.672 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-13 03:55:43.703 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-13 03:55:43.736 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-13 03:55:43.768 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-13 03:55:43.814 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-13 03:55:43.853 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-13 03:55:43.890 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-13 03:55:43.922 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-13 03:55:43.955 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-13 03:55:43.989 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-13 03:55:44.020 | INFO     | app.routers.auth_router:register:17 - register api is called
+2026-03-13 03:55:44.055 | INFO     | app.routers.product_router:list_products:29 - List all products API called
+2026-03-13 03:55:44.056 | INFO     | app.routers.product_router:list_products:33 - 1 products returned
+2026-03-13 03:55:44.074 | INFO     | app.routers.product_router:get_my_products:46 - My products API called user_id=1
+2026-03-13 03:55:44.075 | INFO     | app.routers.product_router:get_my_products:54 - 1 products returned for seller
+2026-03-13 03:55:44.087 | INFO     | app.routers.product_router:search_products:71 - Search products API called keyword=laptop
+2026-03-13 03:55:44.088 | INFO     | app.routers.product_router:search_products:77 - 1 products found
+2026-03-13 03:55:44.102 | INFO     | app.routers.product_router:get_product:93 - Get product API called product_id=1
+2026-03-13 03:55:44.102 | SUCCESS  | app.routers.product_router:get_product:107 - Product fetched successfully product_id=1
+2026-03-13 03:55:44.115 | INFO     | app.routers.product_router:get_product:93 - Get product API called product_id=999
+2026-03-13 03:55:44.116 | ERROR    | app.routers.product_router:get_product:100 - Product not found product_id=999
+2026-03-13 03:55:44.130 | INFO     | app.routers.product_router:add_product:124 - Create product API called seller_id=1
+2026-03-13 03:55:44.130 | SUCCESS  | app.routers.product_router:add_product:133 - Product created product_id=1
+2026-03-13 03:55:44.145 | INFO     | app.routers.product_router:update_product:151 - Update product API called product_id=1
+2026-03-13 03:55:44.146 | SUCCESS  | app.routers.product_router:update_product:162 - Product updated product_id=1
+2026-03-13 03:55:44.160 | INFO     | app.routers.product_router:delete_product:180 - Delete product API called product_id=1
+2026-03-13 03:55:44.160 | SUCCESS  | app.routers.product_router:delete_product:191 - Product deleted product_id=1
+2026-03-13 03:55:44.176 | INFO     | app.routers.user_router:save_user:23 - Creating new user with email=testuser@example.com
+2026-03-13 03:55:44.176 | ERROR    | app.main:global_exception_handler:45 - Unhandled error: 'UserRequest' object has no attribute 'name'
+Traceback (most recent call last):
+
+  File "C:\Python314\Lib\threading.py", line 1043, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000001F17F4494E0>
+    └ <Thread(asyncio-portal-1f106b669c0, started daemon 18440)>
+  File "C:\Python314\Lib\threading.py", line 1081, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000001F17F449170>
+    │    │        │   └ <Thread(asyncio-portal-1f106b669c0, started daemon 18440)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000001F1052EC4C0>
+    └ <Thread(asyncio-portal-1f106b669c0, started daemon 18440)>
+  File "C:\Python314\Lib\threading.py", line 1023, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(asyncio-portal-1f106b669c0, started daemon 18440)>
+    │    │        │    └ ()
+    │    │        └ <Thread(asyncio-portal-1f106b669c0, started daemon 18440)>
+    │    └ <function start_blocking_portal.<locals>.run_blocking_portal at 0x000001F10691CA90>
+    └ <Thread(asyncio-portal-1f106b669c0, started daemon 18440)>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\from_thread.py", line 532, in run_blocking_portal
+    run_eventloop(
+    └ <function run at 0x000001F17FBBB270>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_core\_eventloop.py", line 77, in run
+    return async_backend.run(func, args, {}, backend_options)
+           │             │   │     │         └ {}
+           │             │   │     └ ()
+           │             │   └ <function start_blocking_portal.<locals>.run_portal at 0x000001F10691CF60>
+           │             └ <classmethod(<function AsyncIOBackend.run at 0x000001F1021789E0>)>
+           └ <class 'anyio._backends._asyncio.AsyncIOBackend'>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2342, in run
+    return runner.run(wrapper())
+           │      │   └ <function start_blocking_portal.<locals>.run_portal at 0x000001F10691DD20>
+           │      └ <function Runner.run at 0x000001F10204E610>
+           └ <asyncio.runners.Runner object at 0x000001F106B65230>
+  File "C:\Python314\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='anyio.from_thread.start_blocking_portal.<locals>.run_portal' coro=<start_blocking_portal.<locals>.run_por...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001F10204A980>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001F106B65230>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 706, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x000001F10204A8D0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001F10204CA90>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001F102070510>
+    └ <Handle Task.task_wakeup()>
+  File "C:\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup()>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\from_thread.py", line 259, in _call_func
+    retval = await retval_or_awaitable
+                   └ <coroutine object FastAPI.__call__ at 0x000001F106A80F40>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <function _TestClientTransport.handle_request.<locals>.send at 0x000001F10691CBF0>
+                           │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F10691C880>
+                           └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function _TestClientTransport.handle_request.<locals>.send at 0x000001F10691CBF0>
+          │    │                │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F10691C880>
+          │    │                └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000001F1057D2660>
+          └ <fastapi.applications.FastAPI object at 0x000001F105348830>
+> File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000001F10691D170>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F10691C880>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000001F1057D2510>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000001F1057D2660>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000001F10691D170>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F10691C880>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001F1057D23C0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001F1057D2510>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000001F10691D170>
+          │                            │    │    │     │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F10691C880>
+          │                            │    │    │     └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │                            │    │    └ <starlette.requests.Request object at 0x000001F10691D2E0>
+          │                            │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001F1057D0050>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001F1057D23C0>
+          └ <function wrap_app_handling_exceptions at 0x000001F1038D6FB0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001F10691DB10>
+          │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F10691C880>
+          │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001F1057D0050>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001F10691DB10>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F10691C880>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <fastapi.routing.APIRouter object at 0x000001F10534E9C0>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001F1057D0050>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001F10691DB10>
+          │    │                │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F10691C880>
+          │    │                └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000001F10534E9C0>>
+          └ <fastapi.routing.APIRouter object at 0x000001F10534E9C0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001F10691DB10>
+          │     │      │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F10691C880>
+          │     │      └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │     └ <function Route.handle at 0x000001F1038F9BC0>
+          └ APIRoute(path='/api/v1/users/', name='save_user', methods=['POST'])
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001F10691DB10>
+          │    │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F10691C880>
+          │    │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │    └ <function request_response.<locals>.app at 0x000001F1053619B0>
+          └ APIRoute(path='/api/v1/users/', name='save_user', methods=['POST'])
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 119, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001F10691DB10>
+          │                            │    │        │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F10691C880>
+          │                            │    │        └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          │                            │    └ <starlette.requests.Request object at 0x000001F10691D860>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000001F10691DC70>
+          └ <function wrap_app_handling_exceptions at 0x000001F1038D6FB0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001F10691DFE0>
+          │   │      └ <function _TestClientTransport.handle_request.<locals>.receive at 0x000001F10691C880>
+          │   └ {'type': 'http', 'http_version': '1.1', 'method': 'POST', 'path': '/api/v1/users/', 'raw_path': b'/api/v1/users/', 'root_path...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000001F10691DC70>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 105, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x000001F10691D860>
+                     └ <function get_request_handler.<locals>.app at 0x000001F105361900>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 424, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000001F10390AE50>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\routing.py", line 314, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+                 │                 │         │       └ {'service': <tests.routers.test_user_router.MockUserService object at 0x000001F1069CE900>, 'req': UserRequest(email='testuser...
+                 │                 │         └ <function save_user at 0x000001F1052D9DD0>
+                 │                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[ModelField(field_info=Body(Pydant...
+                 └ <function run_in_threadpool at 0x000001F102650BF0>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+                 │     │         │        └ functools.partial(<function save_user at 0x000001F1052D9DD0>, service=<tests.routers.test_user_router.MockUserService object ...
+                 │     │         └ <function run_sync at 0x000001F17FD073D0>
+                 │     └ <module 'anyio.to_thread' from 'C:\\code\\Flipkart-clone\\venv\\Lib\\site-packages\\anyio\\to_thread.py'>
+                 └ <module 'anyio' from 'C:\\code\\Flipkart-clone\\venv\\Lib\\site-packages\\anyio\\__init__.py'>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+                 └ <function get_async_backend at 0x000001F17FD06B90>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+                 └ <Future finished exception=AttributeError("'UserRequest' object has no attribute 'name'")>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+
+  File "C:\code\Flipkart-clone\app\routers\user_router.py", line 25, in save_user
+    name=req.name,
+         └ UserRequest(email='testuser@example.com', password='StrongPass123', role='user')
+
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\pydantic\main.py", line 1026, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+                                 │                                          └ 'name'
+                                 └ UserRequest(email='testuser@example.com', password='StrongPass123', role='user')
+
+AttributeError: 'UserRequest' object has no attribute 'name'
+2026-03-13 03:55:44.208 | INFO     | app.routers.user_router:get_users:39 - Fetching all users
+2026-03-13 03:55:44.208 | INFO     | app.routers.user_router:get_users:41 - 2 users fetched
+2026-03-13 03:55:47.855 | INFO     | app.main:lifespan:30 - Shutting down Flipkart Clone API
+2026-03-13 03:55:47.857 | INFO     | app.main:lifespan:32 - Database connection closed
+2026-04-17 11:18:43.512 | INFO     | app.main:lifespan:23 - Starting Flipkart Clone API
+2026-04-17 11:18:43.513 | INFO     | app.main:lifespan:26 - Creating database tables...
+2026-04-17 11:18:43.850 | INFO     | app.main:lifespan:29 - HTTP client initialized
+2026-04-17 11:18:49.669 | ERROR    | app.main:global_exception_handler:47 - Unhandled error: 401: Authorization header missing
+  + Exception Group Traceback (most recent call last):
+  |
+  |   File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_utils.py", line 81, in collapse_excgroups
+  |     yield
+  |   File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\base.py", line 192, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |                │     │                      └ <anyio._backends._asyncio.TaskGroup object at 0x00000238FE4A2AD0>
+  |                │     └ <function create_task_group at 0x00000238FB5C1BC0>
+  |                └ <module 'anyio' from 'C:\\code\\Flipkart-clone\\venv\\Lib\\site-packages\\anyio\\__init__.py'>
+  |   File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  |
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |
+    |   File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |           │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x00000238FE4E6980>
+    |           │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000238FE4A1...
+    |           │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+    |           │    └ <app.core.auth_middleware.AuthMiddleware object at 0x00000238FE477E00>
+    |           └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x00000238FE4E8050>
+    |   File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |          │            │            └ <function collapse_excgroups at 0x00000238FB81D850>
+    |          │            └ MemoryObjectSendStream(_state=_MemoryObjectStreamState(max_buffer_size=0, buffer=deque([]), open_send_channels=0, open_receiv...
+    |          └ MemoryObjectReceiveStream(_state=_MemoryObjectStreamState(max_buffer_size=0, buffer=deque([]), open_send_channels=0, open_rec...
+    |   File "C:\Python314\Lib\contextlib.py", line 162, in __exit__
+    |     self.gen.throw(value)
+    |     │    │   │     └ ExceptionGroup('unhandled errors in a TaskGroup', [HTTPException(status_code=401, detail='Authorization header missing')])
+    |     │    │   └ <method 'throw' of 'generator' objects>
+    |     │    └ <generator object collapse_excgroups at 0x00000238FE4FBAE0>
+    |     └ <contextlib._GeneratorContextManager object at 0x00000238FE545630>
+    |   File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    |     raise exc
+    |   File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                      │    │             │        └ <function BaseHTTPMiddleware.__call__.<locals>.call_next at 0x00000238FE56C930>
+    |                      │    │             └ <starlette.middleware.base._CachedRequest object at 0x00000238FE4A1F90>
+    |                      │    └ <bound method AuthMiddleware.dispatch of <app.core.auth_middleware.AuthMiddleware object at 0x00000238FE477E00>>
+    |                      └ <app.core.auth_middleware.AuthMiddleware object at 0x00000238FE477E00>
+    |
+    |   File "C:\code\Flipkart-clone\app\core\auth_middleware.py", line 31, in dispatch
+    |     raise HTTPException(
+    |           └ <class 'fastapi.exceptions.HTTPException'>
+    |
+    | fastapi.exceptions.HTTPException: 401: Authorization header missing
+    +------------------------------------
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "C:\Python314\Lib\multiprocessing\spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 328
+               │     └ 3
+               └ <function _main at 0x00000238F835CEB0>
+  File "C:\Python314\Lib\multiprocessing\spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 328
+           │    └ <function BaseProcess._bootstrap at 0x00000238F8232FB0>
+           └ <SpawnProcess name='SpawnProcess-1' parent=6976 started>
+  File "C:\Python314\Lib\multiprocessing\process.py", line 320, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x00000238F8232350>
+    └ <SpawnProcess name='SpawnProcess-1' parent=6976 started>
+  File "C:\Python314\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x00000238FAE4D7F0>, 'target': <bound method Server.run of <uvicorn.server.Server...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-1' parent=6976 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-1' parent=6976 started>
+    │    └ <function subprocess_started at 0x00000238FAEC16F0>
+    └ <SpawnProcess name='SpawnProcess-1' parent=6976 started>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\uvicorn\_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket fd=580, family=2, type=1, proto=6, laddr=('127.0.0.1', 8000)>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x00000238FAE4D940>>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\uvicorn\server.py", line 75, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+           │           │    │             │                      │    │      └ <function Config.get_loop_factory at 0x00000238FAE3C040>
+           │           │    │             │                      │    └ <uvicorn.config.Config object at 0x00000238FAE4D7F0>
+           │           │    │             │                      └ <uvicorn.server.Server object at 0x00000238FAE4D940>
+           │           │    │             └ [<socket.socket fd=580, family=2, type=1, proto=6, laddr=('127.0.0.1', 8000)>]
+           │           │    └ <function Server.serve at 0x00000238FAEB3530>
+           │           └ <uvicorn.server.Server object at 0x00000238FAE4D940>
+           └ <function run at 0x00000238FA225850>
+  File "C:\Python314\Lib\asyncio\runners.py", line 204, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x00000238FAE97100>
+           │      └ <function Runner.run at 0x00000238FA225C70>
+           └ <asyncio.runners.Runner object at 0x00000238FAE4E3C0>
+  File "C:\Python314\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at C:\code\Flipkart-clone\venv\Lib\site-packages\uvicorn\server.py:7...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x00000238FA2A9FE0>
+           │    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x00000238FAE4E3C0>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 706, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x00000238FA2A9F30>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x00000238FA2240F0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x00000238F89BFB60>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x00000238FE504AF0>()>
+  File "C:\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <_asyncio.TaskStepMethWrapper object at 0x00000238FE504AF0>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <_asyncio.TaskStepMethWrapper object at 0x00000238FE504AF0>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x00000238FE504AF0>()>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x00000238FE477230>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000238FE4A16D0>>
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000238FE4A1...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x00000238FE474EC0>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x00000238FE477230>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000238FE4A16D0>>
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000238FE4A1...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000238FE4A16D0>>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000238FE4A1...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x00000238FE4E8050>
+          └ <fastapi.applications.FastAPI object at 0x00000238FE474EC0>
+> File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x00000238FE4E6980>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000238FE4A1...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <app.core.auth_middleware.AuthMiddleware object at 0x00000238FE477E00>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x00000238FE4E8050>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+         │            │            └ <function collapse_excgroups at 0x00000238FB81D850>
+         │            └ MemoryObjectSendStream(_state=_MemoryObjectStreamState(max_buffer_size=0, buffer=deque([]), open_send_channels=0, open_receiv...
+         └ MemoryObjectReceiveStream(_state=_MemoryObjectStreamState(max_buffer_size=0, buffer=deque([]), open_send_channels=0, open_rec...
+  File "C:\Python314\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    │    │   │     └ ExceptionGroup('unhandled errors in a TaskGroup', [HTTPException(status_code=401, detail='Authorization header missing')])
+    │    │   └ <method 'throw' of 'generator' objects>
+    │    └ <generator object collapse_excgroups at 0x00000238FE4FBAE0>
+    └ <contextlib._GeneratorContextManager object at 0x00000238FE545630>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+                     │    │             │        └ <function BaseHTTPMiddleware.__call__.<locals>.call_next at 0x00000238FE56C930>
+                     │    │             └ <starlette.middleware.base._CachedRequest object at 0x00000238FE4A1F90>
+                     │    └ <bound method AuthMiddleware.dispatch of <app.core.auth_middleware.AuthMiddleware object at 0x00000238FE477E00>>
+                     └ <app.core.auth_middleware.AuthMiddleware object at 0x00000238FE477E00>
+
+  File "C:\code\Flipkart-clone\app\core\auth_middleware.py", line 31, in dispatch
+    raise HTTPException(
+          └ <class 'fastapi.exceptions.HTTPException'>
+
+fastapi.exceptions.HTTPException: 401: Authorization header missing
+2026-04-17 11:21:00.216 | INFO     | app.main:lifespan:31 - Shutting down Flipkart Clone API
+2026-04-17 11:21:00.229 | INFO     | app.main:lifespan:33 - HTTP client closed
+2026-04-17 11:21:00.251 | INFO     | app.main:lifespan:35 - Database connection closed
+2026-04-17 11:21:03.484 | INFO     | app.main:lifespan:23 - Starting Flipkart Clone API
+2026-04-17 11:21:03.484 | INFO     | app.main:lifespan:26 - Creating database tables...
+2026-04-17 11:21:03.568 | INFO     | app.main:lifespan:29 - HTTP client initialized
+2026-04-17 11:21:04.775 | INFO     | app.main:lifespan:31 - Shutting down Flipkart Clone API
+2026-04-17 11:21:04.789 | INFO     | app.main:lifespan:33 - HTTP client closed
+2026-04-17 11:21:04.791 | INFO     | app.main:lifespan:35 - Database connection closed
+2026-04-17 11:21:07.596 | INFO     | app.main:lifespan:23 - Starting Flipkart Clone API
+2026-04-17 11:21:07.597 | INFO     | app.main:lifespan:26 - Creating database tables...
+2026-04-17 11:21:07.699 | INFO     | app.main:lifespan:29 - HTTP client initialized
+2026-04-17 11:21:29.156 | INFO     | app.main:lifespan:31 - Shutting down Flipkart Clone API
+2026-04-17 11:21:29.175 | INFO     | app.main:lifespan:33 - HTTP client closed
+2026-04-17 11:21:29.179 | INFO     | app.main:lifespan:35 - Database connection closed
+2026-04-17 11:21:34.018 | INFO     | app.main:lifespan:23 - Starting Flipkart Clone API
+2026-04-17 11:21:34.019 | INFO     | app.main:lifespan:26 - Creating database tables...
+2026-04-17 11:21:34.125 | INFO     | app.main:lifespan:29 - HTTP client initialized
+2026-04-17 11:35:33.991 | INFO     | app.main:lifespan:35 - Starting Flipkart Clone API
+2026-04-17 11:35:33.992 | INFO     | app.main:lifespan:38 - Creating database tables...
+2026-04-17 11:35:34.133 | INFO     | app.main:lifespan:41 - HTTP client initialized
+2026-04-17 11:35:43.918 | INFO     | app.main:lifespan:45 - Shutting down Flipkart Clone API
+2026-04-17 11:35:43.936 | INFO     | app.main:lifespan:48 - HTTP client closed
+2026-04-17 11:35:43.938 | INFO     | app.main:lifespan:51 - Database connection closed
+2026-04-17 11:35:53.713 | INFO     | app.main:lifespan:35 - Starting Flipkart Clone API
+2026-04-17 11:35:53.714 | INFO     | app.main:lifespan:38 - Creating database tables...
+2026-04-17 11:35:53.785 | INFO     | app.main:lifespan:41 - HTTP client initialized
+2026-04-17 11:35:58.460 | INFO     | app.core.logging_middleware:dispatch:11 - Incoming request GET http://127.0.0.1:8000/
+2026-04-17 11:35:58.471 | INFO     | app.core.logging_middleware:dispatch:19 - Completed 200 in 0.011s
+2026-04-17 11:35:58.620 | ERROR    | app.main:global_exception_handler:106 - Unhandled error: 401: Authorization header missing
+  + Exception Group Traceback (most recent call last):
+  |
+  |   File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_utils.py", line 81, in collapse_excgroups
+  |     yield
+  |   File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\base.py", line 192, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |                │     │                      └ <anyio._backends._asyncio.TaskGroup object at 0x000001DDB44F9220>
+  |                │     └ <function create_task_group at 0x000001DDB1501BC0>
+  |                └ <module 'anyio' from 'C:\\code\\Flipkart-clone\\venv\\Lib\\site-packages\\anyio\\__init__.py'>
+  |   File "C:\code\Flipkart-clone\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  |
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |
+    |   File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |           │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000001DDB4592E50>
+    |           │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x000001DDB4556...
+    |           │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+    |           │    └ <app.core.auth_middleware.AuthMiddleware object at 0x000001DDB45A02F0>
+    |           └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000001DDB45A0440>
+    |   File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |          │            │            └ <function collapse_excgroups at 0x000001DDB175D850>
+    |          │            └ MemoryObjectSendStream(_state=_MemoryObjectStreamState(max_buffer_size=0, buffer=deque([]), open_send_channels=0, open_receiv...
+    |          └ MemoryObjectReceiveStream(_state=_MemoryObjectStreamState(max_buffer_size=0, buffer=deque([]), open_send_channels=0, open_rec...
+    |   File "C:\Python314\Lib\contextlib.py", line 162, in __exit__
+    |     self.gen.throw(value)
+    |     │    │   │     └ ExceptionGroup('unhandled errors in a TaskGroup', [HTTPException(status_code=401, detail='Authorization header missing')])
+    |     │    │   └ <method 'throw' of 'generator' objects>
+    |     │    └ <generator object collapse_excgroups at 0x000001DDB4597220>
+    |     └ <contextlib._GeneratorContextManager object at 0x000001DDB4543690>
+    |   File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    |     raise exc
+    |   File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                      │    │             │        └ <function BaseHTTPMiddleware.__call__.<locals>.call_next at 0x000001DDB4547AB0>
+    |                      │    │             └ <starlette.middleware.base._CachedRequest object at 0x000001DDB44FA9E0>
+    |                      │    └ <bound method AuthMiddleware.dispatch of <app.core.auth_middleware.AuthMiddleware object at 0x000001DDB45A02F0>>
+    |                      └ <app.core.auth_middleware.AuthMiddleware object at 0x000001DDB45A02F0>
+    |
+    |   File "C:\code\Flipkart-clone\app\core\auth_middleware.py", line 31, in dispatch
+    |     raise HTTPException(
+    |           └ <class 'fastapi.exceptions.HTTPException'>
+    |
+    | fastapi.exceptions.HTTPException: 401: Authorization header missing
+    +------------------------------------
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "C:\Python314\Lib\multiprocessing\spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 340
+               │     └ 3
+               └ <function _main at 0x000001DDAE30CEB0>
+  File "C:\Python314\Lib\multiprocessing\spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 340
+           │    └ <function BaseProcess._bootstrap at 0x000001DDAE1E2FB0>
+           └ <SpawnProcess name='SpawnProcess-1' parent=11272 started>
+  File "C:\Python314\Lib\multiprocessing\process.py", line 320, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x000001DDAE1E2350>
+    └ <SpawnProcess name='SpawnProcess-1' parent=11272 started>
+  File "C:\Python314\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x000001DDB0D8D7F0>, 'target': <bound method Server.run of <uvicorn.server.Server...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-1' parent=11272 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-1' parent=11272 started>
+    │    └ <function subprocess_started at 0x000001DDB0E016F0>
+    └ <SpawnProcess name='SpawnProcess-1' parent=11272 started>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\uvicorn\_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket fd=580, family=2, type=1, proto=6, laddr=('127.0.0.1', 8000)>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x000001DDB0D8D940>>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\uvicorn\server.py", line 75, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+           │           │    │             │                      │    │      └ <function Config.get_loop_factory at 0x000001DDB0D7C040>
+           │           │    │             │                      │    └ <uvicorn.config.Config object at 0x000001DDB0D8D7F0>
+           │           │    │             │                      └ <uvicorn.server.Server object at 0x000001DDB0D8D940>
+           │           │    │             └ [<socket.socket fd=580, family=2, type=1, proto=6, laddr=('127.0.0.1', 8000)>]
+           │           │    └ <function Server.serve at 0x000001DDB0DF3530>
+           │           └ <uvicorn.server.Server object at 0x000001DDB0D8D940>
+           └ <function run at 0x000001DDB0165850>
+  File "C:\Python314\Lib\asyncio\runners.py", line 204, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x000001DDB0DDB100>
+           │      └ <function Runner.run at 0x000001DDB0165C70>
+           └ <asyncio.runners.Runner object at 0x000001DDB0D8E3C0>
+  File "C:\Python314\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at C:\code\Flipkart-clone\venv\Lib\site-packages\uvicorn\server.py:7...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001DDB01D9FE0>
+           │    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001DDB0D8E3C0>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 706, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x000001DDB01D9F30>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001DDB01640F0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001DDAE943B60>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x000001DDB45A9270>()>
+  File "C:\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <_asyncio.TaskStepMethWrapper object at 0x000001DDB45A9270>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <_asyncio.TaskStepMethWrapper object at 0x000001DDB45A9270>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x000001DDB45A9270>()>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000001DDB4527380>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x000001DDB4556990>>
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x000001DDB4556...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x000001DDB4524590>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000001DDB4527380>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x000001DDB4556990>>
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x000001DDB4556...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x000001DDB4556990>>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x000001DDB4556...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000001DDB45A0440>
+          └ <fastapi.applications.FastAPI object at 0x000001DDB4524590>
+> File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000001DDB4592E50>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x000001DDB4556...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <app.core.auth_middleware.AuthMiddleware object at 0x000001DDB45A02F0>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000001DDB45A0440>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+         │            │            └ <function collapse_excgroups at 0x000001DDB175D850>
+         │            └ MemoryObjectSendStream(_state=_MemoryObjectStreamState(max_buffer_size=0, buffer=deque([]), open_send_channels=0, open_receiv...
+         └ MemoryObjectReceiveStream(_state=_MemoryObjectStreamState(max_buffer_size=0, buffer=deque([]), open_send_channels=0, open_rec...
+  File "C:\Python314\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    │    │   │     └ ExceptionGroup('unhandled errors in a TaskGroup', [HTTPException(status_code=401, detail='Authorization header missing')])
+    │    │   └ <method 'throw' of 'generator' objects>
+    │    └ <generator object collapse_excgroups at 0x000001DDB4597220>
+    └ <contextlib._GeneratorContextManager object at 0x000001DDB4543690>
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\code\Flipkart-clone\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+                     │    │             │        └ <function BaseHTTPMiddleware.__call__.<locals>.call_next at 0x000001DDB4547AB0>
+                     │    │             └ <starlette.middleware.base._CachedRequest object at 0x000001DDB44FA9E0>
+                     │    └ <bound method AuthMiddleware.dispatch of <app.core.auth_middleware.AuthMiddleware object at 0x000001DDB45A02F0>>
+                     └ <app.core.auth_middleware.AuthMiddleware object at 0x000001DDB45A02F0>
+
+  File "C:\code\Flipkart-clone\app\core\auth_middleware.py", line 31, in dispatch
+    raise HTTPException(
+          └ <class 'fastapi.exceptions.HTTPException'>
+
+fastapi.exceptions.HTTPException: 401: Authorization header missing
+2026-04-17 11:36:04.685 | INFO     | app.core.logging_middleware:dispatch:11 - Incoming request GET http://127.0.0.1:8000/docs
+2026-04-17 11:36:04.689 | INFO     | app.core.logging_middleware:dispatch:19 - Completed 200 in 0.004s
+2026-04-17 11:36:04.984 | INFO     | app.core.logging_middleware:dispatch:11 - Incoming request GET http://127.0.0.1:8000/openapi.json
+2026-04-17 11:36:05.088 | INFO     | app.core.logging_middleware:dispatch:19 - Completed 200 in 0.104s
+2026-04-17 11:40:42.500 | INFO     | app.main:lifespan:45 - Shutting down Flipkart Clone API
+2026-04-17 11:40:42.507 | INFO     | app.main:lifespan:48 - HTTP client closed
+2026-04-17 11:40:42.513 | INFO     | app.main:lifespan:51 - Database connection closed
